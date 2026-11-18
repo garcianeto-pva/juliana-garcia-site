@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Juliana M. Garcia — Psicóloga clínica. Um espaço de escuta, acolhimento e autoconhecimento." />
+    <meta name="theme-color" content="#FCF9F8" />
+    <title>Juliana M. Garcia | Psicóloga Clínica</title>
+
+    <script>
+      tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                ink: '#333A5A',
+                plum: '#A8518A',
+                mist: '#F3EBF0',
+                cream: '#FCF9F8',
+                fog: '#E6E9F1',
+                cta: '#F2E4EC',
+              },
+              fontFamily: {
+                display: ['"Playfair Display"', 'Georgia', 'serif'],
+                sans: ['"DM Sans"', 'Arial', 'sans-serif'],
+                script: ['Caveat', 'cursive'],
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --bg-primary: #fcf9f8;
+        --bg-surface: #f3ebf0;
+        --bg-footer-cta: #f2e4ec;
+        --color-primary: #a8518a;
+        --color-secondary: #333a5a;
+        --color-support: #ead9e3;
+        --text-primary: #333a5a;
+        --text-secondary: #686879;
+        --border-subtle: rgba(51, 58, 90, 0.14);
+        --container: 1152px;
+      }
+
+      html { scroll-behavior: smooth; }
+      body {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        font-family: "DM Sans", Arial, sans-serif;
+        overflow-x: hidden;
+      }
+      ::selection { background: var(--color-support); color: var(--color-secondary); }
+      .container-site { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: 24px; }
+      .eyebrow { color: var(--color-primary); font-size: 11px; font-weight: 700; letter-spacing: .14em; line-height: 1.3; text-transform: uppercase; }
+      .display { font-family: "Playfair Display", Georgia, serif; font-weight: 400; letter-spacing: -.035em; }
+      .font-script { font-family: "Caveat", cursive; font-weight: 500; }
+      .hairline { border-color: var(--border-subtle); }
+      .nav-link { position: relative; transition: color .25s ease; }
+      .nav-link::after { background: var(--color-primary); bottom: -8px; content: ""; height: 1px; left: 0; position: absolute; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; width: 100%; }
+      .nav-link:hover, .nav-link[aria-current="page"] { color: var(--color-primary); }
+      .nav-link[aria-current="page"]::after, .nav-link:hover::after { transform: scaleX(1); }
+      .button-main { align-items: center; background: var(--color-primary); border-radius: 9px; color: #fff; display: inline-flex; font-size: 13px; font-weight: 700; gap: 10px; justify-content: center; padding: 14px 22px; transition: background .25s ease, box-shadow .25s ease, transform .25s ease; }
+      .button-main:hover { background: #8f4074; box-shadow: 0 12px 24px rgba(168, 81, 138, .2); transform: translateY(-2px); }
+      .button-main:active { transform: translateY(0); }
+      .button-outline { align-items: center; border: 1px solid var(--border-subtle); border-radius: 9px; display: inline-flex; font-size: 13px; font-weight: 700; gap: 9px; padding: 13px 20px; transition: border .25s ease, background .25s ease, transform .25s ease; }
+      .button-outline:hover { background: #fff; border-color: rgba(168, 81, 138, .45); transform: translateY(-2px); }
+      .leaf-line { opacity: .13; pointer-events: none; position: absolute; }
+      .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+      .reveal.is-visible { opacity: 1; transform: translateY(0); }
+      .delay-1 { transition-delay: .1s; }
+      .delay-2 { transition-delay: .2s; }
+      .delay-3 { transition-delay: .3s; }
+      .photo-frame { overflow: hidden; }
+      .photo-frame img { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+      .photo-frame:hover img { transform: scale(1.035); }
+      .service-card { background: rgba(255, 255, 255, .48); border: 1px solid var(--border-subtle); border-radius: 18px; transition: background .3s ease, border .3s ease, transform .3s ease, box-shadow .3s ease; }
+      .service-card:hover { background: #fff; border-color: rgba(168, 81, 138, .22); box-shadow: 0 18px 40px rgba(51, 58, 90, .07); transform: translateY(-5px); }
+      .icon-badge { align-items: center; background: var(--bg-surface); border-radius: 50%; color: var(--color-primary); display: inline-flex; height: 48px; justify-content: center; width: 48px; }
+      .cta-panel { background: var(--bg-footer-cta); }
+      .hero-photo::after { background: linear-gradient(180deg, transparent 48%, rgba(18, 20, 38, .78) 100%); content: ""; inset: 34% 0 0; pointer-events: none; position: absolute; z-index: 1; }
+      .hero-caption { text-shadow: 0 2px 12px rgba(15, 17, 32, .55); }
+      .progress-bar { background: var(--color-primary); height: 2px; left: 0; position: fixed; top: 0; transform: scaleX(0); transform-origin: left; width: 100%; z-index: 60; }
+      .menu-open .menu-icon-open { display: none; }
+      .menu-open .menu-icon-close { display: block; }
+      .menu-icon-close { display: none; }
+      @media (min-width: 768px) {
+        .container-site { padding-inline: 48px; }
+      }
+      @media (max-width: 767px) {
+        .mobile-menu { background: var(--bg-primary); border-bottom: 1px solid var(--border-subtle); left: 0; opacity: 0; pointer-events: none; position: absolute; right: 0; top: 100%; transform: translateY(-8px); transition: opacity .25s ease, transform .25s ease; }
+        .menu-open .mobile-menu { opacity: 1; pointer-events: auto; transform: translateY(0); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+        .reveal { opacity: 1; transform: none; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Edite somente estes dados para atualizar os contatos da profissional. -->
+    <script>
+      const CONTACT = {
+        crp: "CRP 18/00797",
+        whatsapp: "556696188147",
+        whatsappDisplay: "(66) 9618-8147",
+        instagram: "@julianamartinsgarcia",
+        instagramUrl: "https://www.instagram.com/julianamartinsgarcia/",
+      };
+    </script>
+
+    <div class="progress-bar" id="progress-bar" aria-hidden="true"></div>
+
+    <header class="fixed inset-x-0 top-0 z-50 border-b hairline bg-cream/90 backdrop-blur-md" id="site-header">
+      <div class="container-site relative flex h-[78px] items-center justify-between">
+        <a class="shrink-0" href="#inicio" aria-label="Juliana Garcia, voltar ao início">
+          <img src="./Logomarca/Logotipo Púrpura Fundo Transparente Uso na Internet.png" alt="Juliana M. Garcia Psicóloga Clínica" class="h-auto w-[150px] sm:w-[172px]" />
+        </a>
+
+        <nav class="hidden items-center gap-5 md:flex lg:gap-9" aria-label="Navegação principal">
+          <a class="nav-link text-[13px] font-medium text-ink/75" href="#inicio" aria-current="page">Início</a>
+          <a class="nav-link text-[13px] font-medium text-ink/75" href="#sobre">Sobre</a>
+          <a class="nav-link text-[13px] font-medium text-ink/75" href="#atendimentos">Atendimentos</a>
+          <a class="nav-link text-[13px] font-medium text-ink/75" href="#contato">Contato</a>
+        </nav>
+
+        <div class="hidden md:block">
+          <a class="button-main !px-4 !py-3 text-[12px]" data-whatsapp href="#" target="_blank" rel="noreferrer">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
+            Agendar consulta
+          </a>
+        </div>
+        <button class="flex h-10 w-10 items-center justify-center rounded-full border hairline text-ink md:hidden" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <svg class="menu-icon-open" aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="menu-icon-close" aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="mobile-menu md:hidden">
+          <nav class="container-site flex flex-col gap-1 py-5" aria-label="Navegação móvel">
+            <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#inicio">Início</a>
+            <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#sobre">Sobre</a>
+            <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#atendimentos">Atendimentos</a>
+            <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#contato">Contato</a>
+            <a class="button-main mt-3 flex items-center justify-center gap-2" data-whatsapp href="#" target="_blank" rel="noreferrer">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
+              Agendar consulta <span aria-hidden="true">↗</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative overflow-hidden pt-[126px] md:pt-[158px]" id="inicio">
+        <svg class="leaf-line -right-10 top-24 hidden h-64 w-64 text-plum md:block" viewBox="0 0 260 260" fill="none" aria-hidden="true"><path d="M221 35C145 77 109 130 100 220M176 70c-4-29 11-48 31-54 11 21 3 42-31 54ZM132 109c-25-12-49-5-62 14 21 17 43 10 62-14ZM106 154c-23-1-40 12-45 32 23 7 39-7 45-32ZM184 97c25-1 42 12 48 32-22 8-39-7-48-32Z" stroke="currentColor" stroke-width="1.2"/><path d="M98 208c-19-17-38-19-55-11 8 20 28 26 55 11ZM133 143c16 19 36 24 54 16-5-21-26-29-54-16Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        <div class="container-site grid items-center gap-14 pb-20 md:grid-cols-[.9fr_1.1fr] md:gap-20 md:pb-28">
+          <div class="reveal max-w-[520px]">
+            <p class="eyebrow mb-6">Saúde mental <span class="mx-1 text-ink/30">•</span> Autoconhecimento <span class="mx-1 text-ink/30">•</span> Equilíbrio</p>
+            <h1 class="display text-[clamp(2.65rem,5.3vw,4.7rem)] leading-[1.06] text-ink">Cuidar da sua mente também é <em class="text-plum">prioridade.</em></h1>
+            <p class="mt-7 max-w-[440px] text-[15px] leading-[1.75] text-ink/65 md:text-base">Um espaço seguro para você se escutar com mais gentileza, compreender sua história e construir novos caminhos.</p>
+            <div class="mt-9 flex flex-wrap items-center gap-3">
+              <a class="button-main" data-whatsapp href="#" target="_blank" rel="noreferrer">
+                <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
+                Quero conversar
+              </a>
+              <a class="button-outline" href="#sobre">Conheça meu trabalho <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="mt-7 inline-flex items-center gap-2 text-[12px] text-ink/60">
+              <span class="flex h-7 w-7 items-center justify-center rounded-full bg-mist text-plum" aria-hidden="true">✓</span>
+              <span>Atendimento ético, sigiloso e acolhedor</span>
+            </div>
+          </div>
+
+          <div class="reveal delay-2 relative">
+            <div class="absolute -bottom-5 -left-5 z-0 h-28 w-28 rounded-full bg-mist md:-bottom-7 md:-left-7"></div>
+             <div class="photo-frame hero-photo relative z-10 ml-auto aspect-[.91] max-w-[570px] rounded-[20px] bg-ink shadow-[0_24px_60px_rgba(51,58,90,.14)]">
+               <img src="./Fotos da Juliana/Juliana M Garcia - Psicóloga (2).jpg" alt="Juliana Garcia sorrindo, em um retrato profissional" class="h-full w-full object-cover object-[center_62%]" fetchpriority="high" />
+               <div class="hero-caption absolute bottom-5 left-5 z-10 text-white">
+                 <p class="font-display text-xl font-medium leading-tight">Juliana Garcia</p>
+                 <p class="mt-1 text-[11px] font-semibold uppercase tracking-[.14em] text-white/90">Psicóloga Clínica</p>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-site flex items-center gap-4 border-t hairline py-5 text-[11px] uppercase tracking-[.12em] text-ink/45"><span>Psicoterapia clínica</span><span class="h-px w-8 bg-ink/20"></span><span>Online e presencial</span><span class="ml-auto hidden sm:block">Primavera do Leste · MT</span></div>
+      </section>
+
+      <section class="relative overflow-hidden py-20 md:py-28" id="sobre">
+        <svg class="leaf-line -left-8 bottom-8 h-64 w-64 rotate-[28deg] text-plum" viewBox="0 0 260 260" fill="none" aria-hidden="true"><path d="M51 222C84 156 129 104 218 40M97 155c-20-21-19-42-6-58 19 8 24 30 6 58ZM143 105c-1-25 14-42 34-47 8 22-6 39-34 47ZM78 183c-22-10-42-3-54 15 19 16 39 9 54-15ZM157 130c23-3 42 8 50 26-21 10-40-2-50-26Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        <div class="container-site grid items-center gap-14 md:grid-cols-[.78fr_1.22fr] md:gap-24">
+          <div class="reveal relative mx-auto w-full max-w-[390px] md:mx-0">
+            <div class="absolute -right-4 -top-4 h-full w-full rounded-[20px] border border-plum/20"></div>
+            <div class="photo-frame relative z-10 aspect-[.76] rounded-[20px] bg-mist">
+              <img src="./Fotos da Juliana/Juliana M Garcia - Psicóloga (1).jpg" alt="Juliana Garcia em um retrato vertical acolhedor" class="h-full w-full object-cover object-[center_27%]" loading="lazy" />
+            </div>
+            <div class="absolute -bottom-5 -left-5 z-20 flex h-[76px] w-[76px] items-center justify-center rounded-full border-[6px] border-cream bg-plum text-center font-display text-3xl italic text-white shadow-lg">Ψ</div>
+          </div>
+          <div class="reveal delay-1 max-w-[590px]">
+            <p class="eyebrow mb-5">Sobre mim</p>
+            <h2 class="display max-w-[600px] text-[clamp(2.25rem,4.3vw,3.75rem)] leading-[1.1] text-ink">Um encontro com você, com mais <em class="text-plum">presença.</em></h2>
+            <div class="mt-7 space-y-4 text-[15px] leading-[1.75] text-ink/65">
+              <p>Acredito que cada pessoa carrega uma história única — e que ser acolhida de verdade pode transformar a forma como se relaciona consigo e com o mundo.</p>
+              <p>Meu trabalho é construir, ao seu lado, um espaço de escuta sem julgamentos. Um processo cuidadoso para compreender o que você sente e encontrar possibilidades mais leves de viver.</p>
+            </div>
+            <div class="mt-8 flex flex-wrap items-end justify-between gap-5 border-t hairline pt-6">
+              <div><p class="font-script text-3xl leading-none text-plum md:text-4xl">Juliana Garcia</p><p class="mt-2 text-[11px] font-semibold uppercase tracking-[.12em] text-ink/50">Psicóloga clínica <span class="mx-1 text-plum">•</span> <span data-crp></span></p></div>
+              <span class="text-[12px] text-ink/45">CRP ativo</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-mist/60 py-20 md:py-28" id="atendimentos">
+        <div class="container-site">
+          <div class="reveal mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div><p class="eyebrow mb-5">Como posso te ajudar</p><h2 class="display max-w-[550px] text-[clamp(2.2rem,4vw,3.55rem)] leading-[1.1] text-ink">Cuidado para os desafios de cada fase.</h2></div>
+            <p class="max-w-[330px] text-[14px] leading-[1.7] text-ink/60">A terapia pode ser um lugar de pausa, clareza e reconexão com aquilo que importa para você.</p>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2">
+            <article class="service-card reveal p-7 md:p-8"><span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M12 20a8 8 0 1 0-8-8c0 1.8.6 3.5 1.7 4.8L4 20l3.2-1.7A8 8 0 0 0 12 20Z" stroke="currentColor" stroke-width="1.35"/><path d="M9 12h.01M12 12h.01M15 12h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3 class="display mt-6 text-[23px] text-ink">Ansiedade</h3><p class="mt-3 max-w-[390px] text-[14px] leading-[1.7] text-ink/60">Entenda os sinais do seu corpo e encontre formas mais gentis de lidar com pensamentos acelerados.</p></article>
+            <article class="service-card reveal delay-1 p-7 md:p-8"><span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-3.9-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 6.1-7 10-7 10Z" stroke="currentColor" stroke-width="1.35"/><path d="M8.5 12.5h2l1-2.5 1.2 4 1-2h2" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="display mt-6 text-[23px] text-ink">Autoestima</h3><p class="mt-3 max-w-[390px] text-[14px] leading-[1.7] text-ink/60">Reconstrua a maneira como se olha e fortaleça uma relação mais compassiva com quem você é.</p></article>
+            <article class="service-card reveal delay-1 p-7 md:p-8"><span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.35"/><circle cx="16" cy="8" r="3" stroke="currentColor" stroke-width="1.35"/><path d="M3.5 19c.4-3 2-4.5 4.5-4.5S12.1 16 12.5 19M11.5 19c.4-3 2-4.5 4.5-4.5s4.1 1.5 4.5 4.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></span><h3 class="display mt-6 text-[23px] text-ink">Relacionamentos</h3><p class="mt-3 max-w-[390px] text-[14px] leading-[1.7] text-ink/60">Perceba seus padrões, expresse suas necessidades e crie relações mais honestas e possíveis.</p></article>
+            <article class="service-card reveal delay-2 p-7 md:p-8"><span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M5 17.5c1.5-1.6 3.5-2.5 6-2.5h1c2.5 0 4.5.9 6 2.5M7 11.5c0-4 2-6 5-6s5 2 5 6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/><path d="M12 5V3M9 3h6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></span><h3 class="display mt-6 text-[23px] text-ink">Estresse e mudanças</h3><p class="mt-3 max-w-[390px] text-[14px] leading-[1.7] text-ink/60">Atravesse transições e momentos de sobrecarga com mais recursos, consciência e apoio.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative overflow-hidden py-20 md:py-28" id="contato">
+        <div class="container-site">
+          <div class="cta-panel relative overflow-hidden rounded-[22px] px-7 py-14 text-center md:px-12 md:py-20">
+            <svg class="absolute -right-3 -top-5 h-40 w-40 rotate-12 text-ink/10" viewBox="0 0 120 120" fill="none" aria-hidden="true"><path d="M60 104C53 83 39 63 14 47M43 70c-17-1-28-11-31-25 14-3 27 6 31 25ZM61 50c-1-18 8-29 21-34 6 14-2 27-21 34ZM76 77c15-8 29-5 38 6-11 11-25 9-38-6Z" stroke="currentColor" stroke-width="1"/></svg>
+            <svg class="mx-auto mb-5 text-plum" width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-3.9-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 6.1-7 10-7 10Z" stroke="currentColor" stroke-width="1.3"/></svg>
+            <p class="eyebrow">Um primeiro passo</p>
+            <h2 class="display mx-auto mt-4 max-w-[650px] text-[clamp(2.25rem,4.6vw,3.9rem)] leading-[1.08] text-ink">Você não precisa enfrentar isso <em class="text-plum">sozinho(a).</em></h2>
+            <p class="mx-auto mt-5 max-w-[440px] text-[14px] leading-[1.7] text-ink/60">Vamos conversar sobre o que você está vivendo e entender como a psicoterapia pode te acompanhar.</p>
+            <a class="button-main mt-8" data-whatsapp href="#" target="_blank" rel="noreferrer">Agendar uma conversa <span aria-hidden="true">↗</span></a>
+             <div class="mt-9 flex flex-wrap justify-center gap-x-7 gap-y-3 text-[12px] text-ink/60">
+               <a class="transition-colors hover:text-plum" data-whatsapp href="#" target="_blank" rel="noopener noreferrer">WhatsApp · <span data-whatsapp-display></span></a>
+               <span class="text-ink/20">•</span>
+               <a class="inline-flex items-center gap-2 transition-colors hover:text-plum" data-instagram href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Juliana Garcia">
+                 <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.1" stroke="currentColor" stroke-width="1.7"/><circle cx="17.7" cy="6.4" r="1" fill="currentColor"/></svg>
+                 <span data-instagram-label></span>
+               </a>
+             </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t hairline py-9 md:py-10">
+      <div class="container-site flex flex-col items-center justify-center gap-2 text-center text-[11px] leading-relaxed text-ink/50">
+        <p>© <span id="year"></span> Juliana M. Garcia · Psicóloga Clínica</p>
+        <p><span data-crp></span> · Atendimento online e presencial</p>
+        <p class="flex flex-wrap items-center justify-center gap-3">
+          <a class="transition-colors hover:text-plum" data-whatsapp href="#" target="_blank" rel="noopener noreferrer">WhatsApp · <span data-whatsapp-display></span></a>
+          <span aria-hidden="true">•</span>
+          <a class="inline-flex items-center gap-2 transition-colors hover:text-plum" data-instagram href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Juliana Garcia">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.1" stroke="currentColor" stroke-width="1.7"/><circle cx="17.7" cy="6.4" r="1" fill="currentColor"/></svg>
+            <span data-instagram-label></span>
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const whatsappMessage = encodeURIComponent("Olá, Juliana! Gostaria de saber mais sobre o atendimento psicológico.");
+      const whatsappUrl = `https://wa.me/${CONTACT.whatsapp}?text=${whatsappMessage}`;
+
+      document.querySelectorAll("[data-whatsapp]").forEach((link) => { link.href = whatsappUrl; });
+      document.querySelectorAll("[data-whatsapp-display]").forEach((node) => { node.textContent = CONTACT.whatsappDisplay; });
+      document.querySelectorAll("[data-instagram]").forEach((link) => { link.href = CONTACT.instagramUrl; });
+      document.querySelectorAll("[data-instagram-label]").forEach((label) => { label.textContent = CONTACT.instagram; });
+      document.querySelectorAll("[data-crp]").forEach((node) => { node.textContent = CONTACT.crp; });
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const header = document.getElementById("site-header");
+      const progressBar = document.getElementById("progress-bar");
+      const menuToggle = document.getElementById("menu-toggle");
+      const body = document.body;
+      const closeMobileMenu = () => {
+        body.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menu");
+      };
+      menuToggle.addEventListener("click", () => {
+        const isOpen = body.classList.toggle("menu-open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+      });
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => link.addEventListener("click", closeMobileMenu));
+      window.addEventListener("scroll", () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+        header.classList.toggle("shadow-[0_8px_30px_rgba(51,58,90,.05)]", window.scrollY > 12);
+      }, { passive: true });
+
+      const revealItems = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); }
+          });
+        }, { threshold: .12 });
+        revealItems.forEach((item) => revealObserver.observe(item));
+      } else revealItems.forEach((item) => item.classList.add("is-visible"));
+
+      const sections = [...document.querySelectorAll("main section[id]")];
+      const navLinks = [...document.querySelectorAll("nav[aria-label='Navegação principal'] .nav-link")];
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) navLinks.forEach((link) => link.setAttribute("aria-current", link.getAttribute("href") === `#${entry.target.id}` ? "page" : "false"));
+        });
+      }, { rootMargin: "-35% 0px -55% 0px" });
+      sections.forEach((section) => sectionObserver.observe(section));
+    </script>
+  </body>
+</html>
