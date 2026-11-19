@@ -77,10 +77,11 @@
 3. **Seção 2 — Identificação:** foto de ambiente (`Juliana Garcia - Psicóloga (5).jpeg`) à esquerda e, à direita, kicker, H2, texto completo e painel final em destaque.
 4. **Seção 3 — Áreas de atuação:** H2 `"Como posso te ajudar?"`, subtítulo e grid 2x2 de cards (Trauma emocional, Luto e perdas, Relacionamentos e rupturas afetivas, Autoestima e reconstrução emocional). Fecha com frase editorial e CTA `"Quero iniciar minha psicoterapia"`.
 5. **Seção 4 — Sobre mim:** H2 `"Olá, sou Juliana Garcia."`, subtítulo, texto completo, assinatura caligráfica e credenciais. Foto acolhedora em poltrona (`Juliana Garcia - Psicóloga (3).jpeg`).
-6. **Seção 5 — Psicoterapia online:** foto de retrato (`Juliana Garcia - Psicóloga (10).jpeg`), H2 `"Um espaço de escuta para você, onde estiver."`, texto introdutório, subtítulo `"Como são os atendimentos?"` e três tópicos (Sessões individuais, Frequência dos encontros, Privacidade e sigilo), com CTA.
-7. **Banner CTA Final & Rodapé:**
-   * Faixa em tom suave (`--bg-footer-cta`) com ícone de coração em linha fina, frase de acolhimento, botão centralizado de agendamento e contatos diretos (WhatsApp com `(66) 9618-8147` e Instagram com ícone oficial).
-   * Rodapé minimalista com direitos autorais, CRP 18/00797 e contatos.
+6. **Seção 5 — Psicoterapia online:** foto de retrato (`Juliana Garcia - Psicóloga (10).jpeg`), H2 `"Um espaço de escuta para você, onde estiver."`, texto introdutório, subtítulo `"Como são os atendimentos?"` e quatro tópicos (Sessões individuais, Frequência dos encontros, Privacidade e sigilo, Atendimento online). Fecha com `"Como agendar sua primeira sessão?"` e CTA `"Agendar minha sessão online"`.
+7. **Seção 6 — Perguntas frequentes (FAQ):** acordeão nativo (`<details>`/`<summary>`, exclusivo via `name="faq"`) com 4 perguntas e respostas oficiais sobre psicoterapia online, início do processo, duração e indicação. Acompanha dados estruturados `FAQPage` para SEO.
+8. **Banner CTA Final & Rodapé:**
+   * Faixa em tom suave (`--bg-footer-cta`) com ícone de coração em linha fina, título `"Talvez tenha chegado o momento de olhar para você."`, texto oficial em 5 parágrafos, botão `"Agendar minha sessão online"` e contatos diretos (WhatsApp com `(66) 9618-8147` e Instagram com ícone oficial).
+   * Rodapé com `Juliana Garcia | Psicóloga Clínica`, `Trauma, Luto e Perdas | CRP 18/00797`, WhatsApp `(66) 9618-8147`, Instagram `@julianamartinsgarcia` e direitos autorais. Todos os dados são estáticos no HTML (sem dependência de JavaScript).
 
 ### Diretrizes de imagens
 * Todas as fotos utilizadas estão na pasta `Fotos da Juliana` e são referenciadas com o caminho e a grafia exata dos arquivos (atenção a maiúsculas/minúsculas para deploy na Vercel).
