@@ -66,19 +66,25 @@
 
 1. **Header (Navegação Superior):**
    * Esquerda: Logomarca da **Juliana Garcia** (extraída da pasta do projeto).
-   * Centro: Links limpos (`Início`, `Sobre`, `Atendimentos`, `Contato`) com indicador sutil no item ativo.
+   * Centro: Links limpos (`Início`, `Identificação`, `Áreas de atuação`, `Sobre mim`, `Online`) com indicador sutil no item ativo.
    * Direita: Botão compacto `"Agendar consulta"` com ícone do WhatsApp.
-2. **Hero Section (Split 50/50):**
-   * Coluna Esquerda: Kicker (`SAÚDE MENTAL • AUTOCONHECIMENTO • EQUILÍBRIO`), Headline de impacto com palavra-chave destacada na cor primária, subtítulo explicativo (atendimento online ou presencial), CTA principal e selo de sigilo.
-   * Coluna Direita: Fotografia profissional da Juliana Garcia (da pasta do projeto) com cantos arredondados e enquadramento acolhedor.
-3. **Seção "Sobre mim" (Split Assimétrico 40/60):**
-   * Coluna Esquerda: Foto vertical secundária da Juliana em ambiente de consultório/acolhimento.
-   * Coluna Direita: Título `"Sobre mim"`, 2 parágrafos humanizados sobre propósito e abordagem terapêutica, assinatura estilizada e registro profissional (`Psicóloga | CRP XX/XXXXX`).
-4. **Seção "Como posso te ajudar" (Grid 2x2):**
-   * Título centralizado/alinhado + 4 pilares principais (ex: *Ansiedade*, *Estresse*, *Autoestima*, *Relacionamentos* — ajustáveis conforme o perfil da Juliana).
-5. **Banner CTA Final & Rodapé:**
-   * Faixa em tom suave (`--bg-footer-cta`) com ícone de coração em linha fina, frase de acolhimento (*"Você não precisa enfrentar isso sozinho(a)."*), botão centralizado de agendamento e contatos diretos (WhatsApp e Instagram).
-   * Rodapé minimalista com direitos autorais e CRP.
+2. **Seção 1 — Hero / Página inicial:**
+   * Kicker `JULIANA GARCIA | PSICÓLOGA CLÍNICA` e sub-kicker `Psicoterapia Online | Trauma, Luto e Perdas`.
+   * H1 `"Você não precisa ser forte o tempo todo."` e texto de acolhimento em 4 parágrafos, com a pergunta central em destaque editorial.
+   * Frase de destaque antes dos CTAs: `"Um espaço para você ser escutada, sem precisar dar conta de tudo."`
+   * Dois botões lado a lado (empilhados no mobile): `Agende sua consulta presencial` (primário) e `Agende sua consulta Online` (contornado), ambos com mensagens pré-preenchidas no WhatsApp.
+   * Coluna Direita: fotografia de estúdio (`Juliana M Garcia - Psicóloga (2).jpg`), com legenda branca sobre a imagem: `Juliana Garcia` / `Psicóloga Clínica`.
+3. **Seção 2 — Identificação:** foto de ambiente (`Juliana Garcia - Psicóloga (5).jpeg`) à esquerda e, à direita, kicker, H2, texto completo e painel final em destaque.
+4. **Seção 3 — Áreas de atuação:** H2 `"Como posso te ajudar?"`, subtítulo e grid 2x2 de cards (Trauma emocional, Luto e perdas, Relacionamentos e rupturas afetivas, Autoestima e reconstrução emocional). Fecha com frase editorial e CTA `"Quero iniciar minha psicoterapia"`.
+5. **Seção 4 — Sobre mim:** H2 `"Olá, sou Juliana Garcia."`, subtítulo, texto completo, assinatura caligráfica e credenciais. Foto acolhedora em poltrona (`Juliana Garcia - Psicóloga (3).jpeg`).
+6. **Seção 5 — Psicoterapia online:** foto de retrato (`Juliana Garcia - Psicóloga (10).jpeg`), H2 `"Um espaço de escuta para você, onde estiver."`, texto introdutório, subtítulo `"Como são os atendimentos?"` e três tópicos (Sessões individuais, Frequência dos encontros, Privacidade e sigilo), com CTA.
+7. **Banner CTA Final & Rodapé:**
+   * Faixa em tom suave (`--bg-footer-cta`) com ícone de coração em linha fina, frase de acolhimento, botão centralizado de agendamento e contatos diretos (WhatsApp com `(66) 9618-8147` e Instagram com ícone oficial).
+   * Rodapé minimalista com direitos autorais, CRP 18/00797 e contatos.
+
+### Diretrizes de imagens
+* Todas as fotos utilizadas estão na pasta `Fotos da Juliana` e são referenciadas com o caminho e a grafia exata dos arquivos (atenção a maiúsculas/minúsculas para deploy na Vercel).
+* Fotos de seção usam `rounded-2xl`, `object-cover` e `object-top` (enquadramento facial centralizado); a foto do hero mantém legenda branca legível sobre a imagem.
 
 ---
 

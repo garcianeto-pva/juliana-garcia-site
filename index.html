@@ -3,37 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Juliana M. Garcia — Psicóloga clínica. Um espaço de escuta, acolhimento e autoconhecimento." />
+    <meta name="description" content="Juliana Garcia — Psicóloga Clínica (CRP 18/00797). Psicoterapia online e presencial para mulheres que vivenciam trauma, luto, perdas e rupturas afetivas." />
     <meta name="theme-color" content="#FCF9F8" />
-    <title>Juliana M. Garcia | Psicóloga Clínica</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23A8518A'/%3E%3Ctext x='32' y='47' font-family='Georgia,serif' font-size='39' fill='%23ffffff' text-anchor='middle'%3E%CE%A8%3C/text%3E%3C/svg%3E" />
+    <title>Juliana Garcia | Psicóloga Clínica — Trauma, Luto e Perdas</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind = {
-        config: {
-          theme: {
-            extend: {
-              colors: {
-                ink: '#333A5A',
-                plum: '#A8518A',
-                mist: '#F3EBF0',
-                cream: '#FCF9F8',
-                fog: '#E6E9F1',
-                cta: '#F2E4EC',
-              },
-              fontFamily: {
-                display: ['"Playfair Display"', 'Georgia', 'serif'],
-                sans: ['"DM Sans"', 'Arial', 'sans-serif'],
-                script: ['Caveat', 'cursive'],
-              },
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#333A5A',
+              plum: '#A8518A',
+              mist: '#F3EBF0',
+              cream: '#FCF9F8',
+              fog: '#E6E9F1',
+              cta: '#F2E4EC',
+            },
+            fontFamily: {
+              display: ['"Playfair Display"', 'Georgia', 'serif'],
+              sans: ['"DM Sans"', 'Arial', 'sans-serif'],
+              script: ['Caveat', 'cursive'],
             },
           },
         },
       };
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+    <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 
     <style>
       :root {
@@ -50,6 +50,7 @@
       }
 
       html { scroll-behavior: smooth; }
+      section[id] { scroll-margin-top: 92px; }
       body {
         background: var(--bg-primary);
         color: var(--text-primary);
@@ -66,11 +67,15 @@
       .nav-link::after { background: var(--color-primary); bottom: -8px; content: ""; height: 1px; left: 0; position: absolute; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; width: 100%; }
       .nav-link:hover, .nav-link[aria-current="page"] { color: var(--color-primary); }
       .nav-link[aria-current="page"]::after, .nav-link:hover::after { transform: scaleX(1); }
-      .button-main { align-items: center; background: var(--color-primary); border-radius: 9px; color: #fff; display: inline-flex; font-size: 13px; font-weight: 700; gap: 10px; justify-content: center; padding: 14px 22px; transition: background .25s ease, box-shadow .25s ease, transform .25s ease; }
+
+      .button-main { align-items: center; background: var(--color-primary); border-radius: 9px; color: #fff; display: inline-flex; font-size: 13px; font-weight: 700; gap: 10px; justify-content: center; padding: 14px 22px; text-align: center; transition: background .25s ease, box-shadow .25s ease, transform .25s ease; }
       .button-main:hover { background: #8f4074; box-shadow: 0 12px 24px rgba(168, 81, 138, .2); transform: translateY(-2px); }
       .button-main:active { transform: translateY(0); }
-      .button-outline { align-items: center; border: 1px solid var(--border-subtle); border-radius: 9px; display: inline-flex; font-size: 13px; font-weight: 700; gap: 9px; padding: 13px 20px; transition: border .25s ease, background .25s ease, transform .25s ease; }
-      .button-outline:hover { background: #fff; border-color: rgba(168, 81, 138, .45); transform: translateY(-2px); }
+      .button-outline { align-items: center; background: rgba(255, 255, 255, .55); border: 1px solid rgba(168, 81, 138, .35); border-radius: 9px; color: var(--color-primary); display: inline-flex; font-size: 13px; font-weight: 700; gap: 9px; justify-content: center; padding: 13px 20px; text-align: center; transition: border .25s ease, background .25s ease, transform .25s ease; }
+      .button-outline:hover { background: #fff; border-color: rgba(168, 81, 138, .7); transform: translateY(-2px); }
+      .button-soft { align-items: center; background: #fff; border: 1px solid var(--border-subtle); border-radius: 9px; color: var(--text-primary); display: inline-flex; font-size: 13px; font-weight: 700; gap: 9px; justify-content: center; padding: 13px 20px; text-align: center; transition: border .25s ease, background .25s ease, transform .25s ease; }
+      .button-soft:hover { background: #fff; border-color: rgba(168, 81, 138, .45); transform: translateY(-2px); }
+
       .leaf-line { opacity: .13; pointer-events: none; position: absolute; }
       .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
       .reveal.is-visible { opacity: 1; transform: translateY(0); }
@@ -80,20 +85,22 @@
       .photo-frame { overflow: hidden; }
       .photo-frame img { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
       .photo-frame:hover img { transform: scale(1.035); }
-      .service-card { background: rgba(255, 255, 255, .48); border: 1px solid var(--border-subtle); border-radius: 18px; transition: background .3s ease, border .3s ease, transform .3s ease, box-shadow .3s ease; }
+      .service-card { background: rgba(255, 255, 255, .55); border: 1px solid var(--border-subtle); border-radius: 18px; transition: background .3s ease, border .3s ease, transform .3s ease, box-shadow .3s ease; }
       .service-card:hover { background: #fff; border-color: rgba(168, 81, 138, .22); box-shadow: 0 18px 40px rgba(51, 58, 90, .07); transform: translateY(-5px); }
       .icon-badge { align-items: center; background: var(--bg-surface); border-radius: 50%; color: var(--color-primary); display: inline-flex; height: 48px; justify-content: center; width: 48px; }
       .cta-panel { background: var(--bg-footer-cta); }
-      .hero-photo::after { background: linear-gradient(180deg, transparent 48%, rgba(18, 20, 38, .78) 100%); content: ""; inset: 34% 0 0; pointer-events: none; position: absolute; z-index: 1; }
+      .hero-photo::after { background: linear-gradient(180deg, transparent 42%, rgba(18, 20, 38, .82) 100%); content: ""; inset: 30% 0 0; pointer-events: none; position: absolute; z-index: 1; }
       .hero-caption { text-shadow: 0 2px 12px rgba(15, 17, 32, .55); }
+      .quiet-panel { background: rgba(255, 255, 255, .62); border: 1px solid var(--border-subtle); border-left: 2px solid var(--color-primary); border-radius: 16px; }
       .progress-bar { background: var(--color-primary); height: 2px; left: 0; position: fixed; top: 0; transform: scaleX(0); transform-origin: left; width: 100%; z-index: 60; }
       .menu-open .menu-icon-open { display: none; }
       .menu-open .menu-icon-close { display: block; }
       .menu-icon-close { display: none; }
+      .text-balance { text-wrap: balance; }
       @media (min-width: 768px) {
         .container-site { padding-inline: 48px; }
       }
-      @media (max-width: 767px) {
+      @media (max-width: 1023px) {
         .mobile-menu { background: var(--bg-primary); border-bottom: 1px solid var(--border-subtle); left: 0; opacity: 0; pointer-events: none; position: absolute; right: 0; top: 100%; transform: translateY(-8px); transition: opacity .25s ease, transform .25s ease; }
         .menu-open .mobile-menu { opacity: 1; pointer-events: auto; transform: translateY(0); }
       }
@@ -106,7 +113,7 @@
   </head>
 
   <body>
-    <!-- Edite somente estes dados para atualizar os contatos da profissional. -->
+    <!-- Dados de contato da profissional. Os links de agendamento já estão escritos diretamente em cada botão. -->
     <script>
       const CONTACT = {
         crp: "CRP 18/00797",
@@ -122,34 +129,37 @@
     <header class="fixed inset-x-0 top-0 z-50 border-b hairline bg-cream/90 backdrop-blur-md" id="site-header">
       <div class="container-site relative flex h-[78px] items-center justify-between">
         <a class="shrink-0" href="#inicio" aria-label="Juliana Garcia, voltar ao início">
-          <img src="./Logomarca/Logotipo Púrpura Fundo Transparente Uso na Internet.png" alt="Juliana M. Garcia Psicóloga Clínica" class="h-auto w-[150px] sm:w-[172px]" />
+          <img src="./Logomarca/Logotipo Púrpura Fundo Transparente Uso na Internet.png" alt="Juliana Garcia — Psicóloga Clínica" class="h-auto w-[138px] sm:w-[156px]" />
         </a>
 
-        <nav class="hidden items-center gap-5 md:flex lg:gap-9" aria-label="Navegação principal">
-          <a class="nav-link text-[13px] font-medium text-ink/75" href="#inicio" aria-current="page">Início</a>
-          <a class="nav-link text-[13px] font-medium text-ink/75" href="#sobre">Sobre</a>
-          <a class="nav-link text-[13px] font-medium text-ink/75" href="#atendimentos">Atendimentos</a>
-          <a class="nav-link text-[13px] font-medium text-ink/75" href="#contato">Contato</a>
+        <nav class="hidden items-center gap-5 lg:flex lg:gap-8" aria-label="Navegação principal">
+          <a class="nav-link text-[12.5px] font-medium text-ink/75" href="#inicio" aria-current="page">Início</a>
+          <a class="nav-link text-[12.5px] font-medium text-ink/75" href="#identificacao">Identificação</a>
+          <a class="nav-link text-[12.5px] font-medium text-ink/75" href="#areas">Áreas de atuação</a>
+          <a class="nav-link text-[12.5px] font-medium text-ink/75" href="#sobre">Sobre mim</a>
+          <a class="nav-link text-[12.5px] font-medium text-ink/75" href="#online">Online</a>
         </nav>
 
-        <div class="hidden md:block">
-          <a class="button-main !px-4 !py-3 text-[12px]" data-whatsapp href="#" target="_blank" rel="noreferrer">
+        <div class="hidden lg:block">
+          <a class="button-main !px-4 !py-3 text-[12px]" href="https://wa.me/556696188147?text=Ol%C3%A1%20dra.%20Juliana%20gostaria%20de%20agendar%20minha%20sess%C3%A3o%20online" target="_blank" rel="noopener noreferrer">
             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
             Agendar consulta
           </a>
         </div>
-        <button class="flex h-10 w-10 items-center justify-center rounded-full border hairline text-ink md:hidden" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+
+        <button class="flex h-10 w-10 items-center justify-center rounded-full border hairline text-ink lg:hidden" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
           <svg class="menu-icon-open" aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           <svg class="menu-icon-close" aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </button>
 
-        <div class="mobile-menu md:hidden">
+        <div class="mobile-menu lg:hidden">
           <nav class="container-site flex flex-col gap-1 py-5" aria-label="Navegação móvel">
             <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#inicio">Início</a>
-            <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#sobre">Sobre</a>
-            <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#atendimentos">Atendimentos</a>
-            <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#contato">Contato</a>
-            <a class="button-main mt-3 flex items-center justify-center gap-2" data-whatsapp href="#" target="_blank" rel="noreferrer">
+            <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#identificacao">Identificação</a>
+            <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#areas">Áreas de atuação</a>
+            <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#sobre">Sobre mim</a>
+            <a class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-medium text-ink/80" href="#online">Psicoterapia online</a>
+            <a class="button-main mt-3 flex items-center justify-center gap-2" href="https://wa.me/556696188147?text=Ol%C3%A1%20dra.%20Juliana%20gostaria%20de%20agendar%20minha%20sess%C3%A3o%20online" target="_blank" rel="noopener noreferrer">
               <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
               Agendar consulta <span aria-hidden="true">↗</span>
             </a>
@@ -159,97 +169,281 @@
     </header>
 
     <main>
-      <section class="relative overflow-hidden pt-[126px] md:pt-[158px]" id="inicio">
+      <!-- SEÇÃO 1 — Página inicial -->
+      <section class="relative overflow-hidden pt-[118px] md:pt-[148px]" id="inicio">
         <svg class="leaf-line -right-10 top-24 hidden h-64 w-64 text-plum md:block" viewBox="0 0 260 260" fill="none" aria-hidden="true"><path d="M221 35C145 77 109 130 100 220M176 70c-4-29 11-48 31-54 11 21 3 42-31 54ZM132 109c-25-12-49-5-62 14 21 17 43 10 62-14ZM106 154c-23-1-40 12-45 32 23 7 39-7 45-32ZM184 97c25-1 42 12 48 32-22 8-39-7-48-32Z" stroke="currentColor" stroke-width="1.2"/><path d="M98 208c-19-17-38-19-55-11 8 20 28 26 55 11ZM133 143c16 19 36 24 54 16-5-21-26-29-54-16Z" stroke="currentColor" stroke-width="1.2"/></svg>
-        <div class="container-site grid items-center gap-14 pb-20 md:grid-cols-[.9fr_1.1fr] md:gap-20 md:pb-28">
-          <div class="reveal max-w-[520px]">
-            <p class="eyebrow mb-6">Saúde mental <span class="mx-1 text-ink/30">•</span> Autoconhecimento <span class="mx-1 text-ink/30">•</span> Equilíbrio</p>
-            <h1 class="display text-[clamp(2.65rem,5.3vw,4.7rem)] leading-[1.06] text-ink">Cuidar da sua mente também é <em class="text-plum">prioridade.</em></h1>
-            <p class="mt-7 max-w-[440px] text-[15px] leading-[1.75] text-ink/65 md:text-base">Um espaço seguro para você se escutar com mais gentileza, compreender sua história e construir novos caminhos.</p>
-            <div class="mt-9 flex flex-wrap items-center gap-3">
-              <a class="button-main" data-whatsapp href="#" target="_blank" rel="noreferrer">
-                <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
-                Quero conversar
-              </a>
-              <a class="button-outline" href="#sobre">Conheça meu trabalho <span aria-hidden="true">↓</span></a>
+
+        <div class="container-site grid items-start gap-12 pb-16 md:pb-24 lg:grid-cols-[1.04fr_.96fr] lg:gap-16">
+          <div class="reveal max-w-[610px]">
+            <p class="eyebrow">JULIANA GARCIA | PSICÓLOGA CLÍNICA</p>
+            <p class="mt-3 text-[11.5px] font-semibold uppercase tracking-[.16em] text-ink/45">Psicoterapia Online | Trauma, Luto e Perdas</p>
+
+            <h1 class="display text-balance mt-6 text-[clamp(2.5rem,5vw,4.15rem)] leading-[1.04] text-ink">Você não precisa ser forte <em class="text-plum">o tempo todo.</em></h1>
+
+            <div class="mt-7 space-y-4 text-[14.5px] leading-[1.78] text-ink/65 md:text-[15px]">
+              <p>Há momentos em que a vida exige mais do que conseguimos colocar em palavras.</p>
+              <p>Entre perdas, rupturas, experiências dolorosas e tantas responsabilidades, muitas mulheres aprendem a silenciar o próprio sofrimento para continuar cuidando de tudo e de todos.</p>
+              <p class="display text-[19px] italic leading-[1.5] text-ink/85">Mas quem cuida de você quando é a sua história que precisa de cuidado?</p>
+              <p>A psicoterapia oferece um espaço de escuta e acolhimento para compreender suas dores, elaborar suas experiências e construir novas possibilidades de se relacionar consigo mesma e com a vida.</p>
             </div>
-            <div class="mt-7 inline-flex items-center gap-2 text-[12px] text-ink/60">
-              <span class="flex h-7 w-7 items-center justify-center rounded-full bg-mist text-plum" aria-hidden="true">✓</span>
+
+            <p class="mt-8 border-l-2 border-plum/60 pl-5 text-[14px] font-medium leading-[1.7] text-ink/80 md:text-[15px]">Um espaço para você ser escutada, sem precisar dar conta de tudo.</p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a class="button-main !px-5 !py-[15px] text-[12.5px] leading-snug" href="https://wa.me/556696188147?text=Ol%C3%A1%20dra.%20Juliana%20gostaria%20de%20agendar%20um%20atendimento%20presencial" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" class="shrink-0"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
+                Agende sua consulta presencial
+              </a>
+              <a class="button-outline !px-5 !py-[14px] text-[12.5px] leading-snug" href="https://wa.me/556696188147?text=Ol%C3%A1%20dra.%20Juliana%20gostaria%20de%20agendar%20um%20atendimento%20Online" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" class="shrink-0"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
+                Agende sua consulta Online
+              </a>
+            </div>
+
+            <div class="mt-6 inline-flex items-center gap-2 text-[12px] text-ink/55">
+              <span class="flex h-6 w-6 items-center justify-center rounded-full bg-mist text-[11px] text-plum" aria-hidden="true">✓</span>
               <span>Atendimento ético, sigiloso e acolhedor</span>
             </div>
           </div>
 
-          <div class="reveal delay-2 relative">
+          <div class="reveal delay-2 relative lg:sticky lg:top-28">
             <div class="absolute -bottom-5 -left-5 z-0 h-28 w-28 rounded-full bg-mist md:-bottom-7 md:-left-7"></div>
-             <div class="photo-frame hero-photo relative z-10 ml-auto aspect-[.91] max-w-[570px] rounded-[20px] bg-ink shadow-[0_24px_60px_rgba(51,58,90,.14)]">
-               <img src="./Fotos da Juliana/Juliana M Garcia - Psicóloga (2).jpg" alt="Juliana Garcia sorrindo, em um retrato profissional" class="h-full w-full object-cover object-[center_62%]" fetchpriority="high" />
-               <div class="hero-caption absolute bottom-5 left-5 z-10 text-white">
-                 <p class="font-display text-xl font-medium leading-tight">Juliana Garcia</p>
-                 <p class="mt-1 text-[11px] font-semibold uppercase tracking-[.14em] text-white/90">Psicóloga Clínica</p>
-               </div>
+            <div class="photo-frame hero-photo relative z-10 ml-auto aspect-[4/5] w-full max-w-[500px] rounded-2xl bg-ink shadow-[0_24px_60px_rgba(51,58,90,.16)]">
+              <img src="./Fotos da Juliana/Juliana M Garcia - Psicóloga (2).jpg" alt="Juliana Garcia sentada, sorrindo, em retrato profissional de estúdio" class="h-full w-full object-cover object-[center_32%]" fetchpriority="high" />
+              <div class="hero-caption absolute bottom-6 left-6 z-10 text-white">
+                <p class="font-display text-xl font-medium leading-tight">Juliana Garcia</p>
+                <p class="mt-1 text-[11px] font-semibold uppercase tracking-[.14em] text-white/90">Psicóloga Clínica</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="container-site flex items-center gap-4 border-t hairline py-5 text-[11px] uppercase tracking-[.12em] text-ink/45"><span>Psicoterapia clínica</span><span class="h-px w-8 bg-ink/20"></span><span>Online e presencial</span><span class="ml-auto hidden sm:block">Primavera do Leste · MT</span></div>
+
+        <div class="container-site flex flex-wrap items-center gap-4 border-t hairline py-5 text-[11px] uppercase tracking-[.12em] text-ink/45">
+          <span>Psicoterapia clínica</span>
+          <span class="h-px w-8 bg-ink/20"></span>
+          <span>Online e presencial</span>
+          <span class="ml-auto hidden sm:block">Primavera do Leste · MT</span>
+        </div>
       </section>
 
-      <section class="relative overflow-hidden py-20 md:py-28" id="sobre">
-        <svg class="leaf-line -left-8 bottom-8 h-64 w-64 rotate-[28deg] text-plum" viewBox="0 0 260 260" fill="none" aria-hidden="true"><path d="M51 222C84 156 129 104 218 40M97 155c-20-21-19-42-6-58 19 8 24 30 6 58ZM143 105c-1-25 14-42 34-47 8 22-6 39-34 47ZM78 183c-22-10-42-3-54 15 19 16 39 9 54-15ZM157 130c23-3 42 8 50 26-21 10-40-2-50-26Z" stroke="currentColor" stroke-width="1.2"/></svg>
-        <div class="container-site grid items-center gap-14 md:grid-cols-[.78fr_1.22fr] md:gap-24">
-          <div class="reveal relative mx-auto w-full max-w-[390px] md:mx-0">
-            <div class="absolute -right-4 -top-4 h-full w-full rounded-[20px] border border-plum/20"></div>
-            <div class="photo-frame relative z-10 aspect-[.76] rounded-[20px] bg-mist">
-              <img src="./Fotos da Juliana/Juliana M Garcia - Psicóloga (1).jpg" alt="Juliana Garcia em um retrato vertical acolhedor" class="h-full w-full object-cover object-[center_27%]" loading="lazy" />
+      <!-- SEÇÃO 2 — Identificação -->
+      <section class="relative overflow-hidden bg-mist/55 py-20 md:py-28" id="identificacao">
+        <svg class="leaf-line -right-6 bottom-10 h-56 w-56 rotate-[18deg] text-plum" viewBox="0 0 260 260" fill="none" aria-hidden="true"><path d="M51 222C84 156 129 104 218 40M97 155c-20-21-19-42-6-58 19 8 24 30 6 58ZM143 105c-1-25 14-42 34-47 8 22-6 39-34 47ZM78 183c-22-10-42-3-54 15 19 16 39 9 54-15ZM157 130c23-3 42 8 50 26-21 10-40-2-50-26Z" stroke="currentColor" stroke-width="1.2"/></svg>
+
+        <div class="container-site grid items-start gap-12 md:grid-cols-[.82fr_1.18fr] md:gap-20">
+          <div class="reveal relative mx-auto w-full max-w-[380px] md:sticky md:top-28 md:mx-0">
+            <div class="absolute -left-4 -top-4 h-full w-full rounded-2xl border border-plum/20"></div>
+            <div class="photo-frame relative z-10 aspect-[.78] rounded-2xl bg-cream shadow-[0_20px_50px_rgba(51,58,90,.10)]">
+              <img src="./Fotos da Juliana/Juliana Garcia - Psicóloga (5).jpeg" alt="Juliana Garcia sorrindo, sentada perto da janela, com uma caneca nas mãos" class="h-full w-full object-cover object-top" loading="lazy" />
             </div>
-            <div class="absolute -bottom-5 -left-5 z-20 flex h-[76px] w-[76px] items-center justify-center rounded-full border-[6px] border-cream bg-plum text-center font-display text-3xl italic text-white shadow-lg">Ψ</div>
+            <div class="absolute -bottom-5 -right-4 z-20 flex items-center gap-3 rounded-xl border border-ink/10 bg-cream/95 px-4 py-3 shadow-lg backdrop-blur">
+              <span class="flex h-9 w-9 items-center justify-center rounded-full bg-mist font-display text-lg italic text-plum" aria-hidden="true">Ψ</span>
+              <span class="text-[10px] font-semibold uppercase leading-tight tracking-[.12em] text-ink/60">Escuta clínica<br />e acolhimento</span>
+            </div>
           </div>
-          <div class="reveal delay-1 max-w-[590px]">
+
+          <div class="reveal delay-1 max-w-[620px]">
+            <p class="eyebrow mb-5">Quando a vida pede um espaço de escuta</p>
+            <h2 class="display text-balance text-[clamp(2.1rem,3.9vw,3.35rem)] leading-[1.12] text-ink">Você aprendeu a cuidar de todos. <em class="text-plum">Mas quem tem cuidado de você?</em></h2>
+
+            <div class="mt-7 space-y-4 text-[14.5px] leading-[1.8] text-ink/65 md:text-[15px]">
+              <p>Talvez você seja aquela mulher que todos consideram forte.</p>
+              <p>A que resolve, acolhe, organiza e encontra uma maneira de seguir, mesmo quando a vida parece desmoronar por dentro.</p>
+              <p>Talvez tenha enfrentado perdas que ninguém compreendeu completamente.</p>
+              <p>Talvez carregue marcas de relações difíceis, experiências traumáticas ou despedidas para as quais nunca esteve preparada.</p>
+              <p>Ou talvez esteja vivendo uma fase em que já não se reconhece na mulher que precisou se tornar para dar conta de tantas coisas.</p>
+              <p>Nem sempre o sofrimento aparece em forma de lágrimas. Às vezes, ele se manifesta no cansaço emocional, na culpa, na dificuldade de estabelecer limites ou na sensação de estar distante de si mesma.</p>
+            </div>
+
+            <div class="quiet-panel mt-8 p-6 md:p-7">
+              <p class="text-[15px] font-semibold leading-[1.65] text-ink">Você não precisa esperar chegar ao seu limite para reconhecer que também merece cuidado.</p>
+              <p class="mt-2 text-[14px] leading-[1.75] text-ink/60">A psicoterapia pode oferecer um espaço para escutar aquilo que, por muito tempo, precisou permanecer em silêncio.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 3 — Áreas de atuação -->
+      <section class="relative py-20 md:py-28" id="areas">
+        <div class="container-site">
+          <div class="reveal grid gap-8 md:grid-cols-[1fr_.85fr] md:items-end md:gap-16">
+            <div>
+              <p class="eyebrow mb-5">Áreas de atuação</p>
+              <h2 class="display text-[clamp(2.2rem,4vw,3.5rem)] leading-[1.08] text-ink">Como posso <em class="text-plum">te ajudar?</em></h2>
+            </div>
+            <div class="space-y-3 text-[14px] leading-[1.78] text-ink/60 md:text-[14.5px]">
+              <p class="font-semibold text-ink/85">Cada mulher carrega uma história. E cada história merece ser escutada.</p>
+              <p>Ao longo da vida, atravessamos experiências que podem transformar a maneira como nos enxergamos, nos relacionamos e compreendemos o mundo.</p>
+              <p>Minha atuação clínica é voltada especialmente para mulheres que vivenciam traumas emocionais, lutos, perdas e conflitos afetivos.</p>
+            </div>
+          </div>
+
+          <div class="mt-12 grid gap-4 md:grid-cols-2">
+            <article class="service-card reveal p-7 md:p-9">
+              <span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-3.9-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 6.1-7 10-7 10Z" stroke="currentColor" stroke-width="1.35"/><path d="M8.5 12.5h2l1-2.5 1.2 4 1-2h2" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <h3 class="display mt-6 text-[24px] leading-tight text-ink">Trauma emocional</h3>
+              <p class="mt-2 text-[11px] font-bold uppercase tracking-[.12em] text-plum/85">Quando o passado ainda provoca sofrimento</p>
+              <p class="mt-4 text-[14px] leading-[1.78] text-ink/65">Nem sempre uma experiência dolorosa termina quando o acontecimento passa. Situações de abandono, rejeição, violência psicológica, relações abusivas ou outras vivências traumáticas podem deixar marcas que se manifestam na confiança, na autoestima e nos relacionamentos. A psicoterapia oferece um espaço para compreender essas experiências e seus efeitos, respeitando o tempo, os limites e a singularidade de cada mulher.</p>
+            </article>
+
+            <article class="service-card reveal delay-1 p-7 md:p-9">
+              <span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M5 19c6.5-1.2 10.4-5.2 12.4-13.2 3.1 5.3 1.7 10.9-2.7 13.1-2.8 1.4-6.4 1.1-9.7.1Z" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/><path d="M5.2 19.2c2.4-4.3 5.6-7.2 9.6-9.2" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></span>
+              <h3 class="display mt-6 text-[24px] leading-tight text-ink">Luto e perdas</h3>
+              <p class="mt-2 text-[11px] font-bold uppercase tracking-[.12em] text-plum/85">Aprender a viver com o que mudou</p>
+              <p class="mt-4 text-[14px] leading-[1.78] text-ink/65">Perder alguém que amamos pode transformar profundamente nossa maneira de existir. Mas também vivemos lutos diante de separações, perdas de projetos, mudanças inesperadas e sonhos que não puderam se realizar. Não existe uma forma certa de viver o luto, nem um prazo determinado para deixar de sentir saudade. Na psicoterapia, você encontra um espaço para falar sobre sua dor, seus sentimentos e as transformações que essa ausência trouxe para sua vida.</p>
+            </article>
+
+            <article class="service-card reveal delay-1 p-7 md:p-9">
+              <span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><circle cx="8.2" cy="8.5" r="3.1" stroke="currentColor" stroke-width="1.35"/><circle cx="15.8" cy="8.5" r="3.1" stroke="currentColor" stroke-width="1.35"/><path d="M3.4 19c.4-3.1 2-4.6 4.8-4.6s4.4 1.5 4.8 4.6M11.2 19c.4-3.1 2-4.6 4.8-4.6s4.4 1.5 4.8 4.6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></span>
+              <h3 class="display mt-6 text-[24px] leading-tight text-ink">Relacionamentos e rupturas afetivas</h3>
+              <p class="mt-2 text-[11px] font-bold uppercase tracking-[.12em] text-plum/85">Quando um vínculo se rompe</p>
+              <p class="mt-4 text-[14px] leading-[1.78] text-ink/65">O fim de uma relação pode significar também a perda de planos, expectativas e de uma parte da identidade construída naquele vínculo. Traições, separações, decepções e relações emocionalmente difíceis podem despertar sentimentos de culpa, insegurança, medo e desamparo. O processo terapêutico possibilita investigar esses sentimentos, compreender padrões relacionais e reconhecer suas próprias necessidades e desejos.</p>
+            </article>
+
+            <article class="service-card reveal delay-2 p-7 md:p-9">
+              <span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="3.3" stroke="currentColor" stroke-width="1.35"/><path d="M5.4 20c.5-3.7 3-5.6 6.6-5.6s6.1 1.9 6.6 5.6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/><path d="M18.6 3.2v3.2M21 4.8h-4.8" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></span>
+              <h3 class="display mt-6 text-[24px] leading-tight text-ink">Autoestima e reconstrução emocional</h3>
+              <p class="mt-2 text-[11px] font-bold uppercase tracking-[.12em] text-plum/85">Reencontrar-se em meio às mudanças</p>
+              <p class="mt-4 text-[14px] leading-[1.78] text-ink/65">Em determinados momentos da vida, muitas mulheres percebem que passaram anos atendendo às expectativas dos outros e deixando suas próprias necessidades em segundo plano. A autocobrança, o medo de decepcionar, a dificuldade de dizer não e a sensação de nunca fazer o suficiente podem gerar sofrimento. A psicoterapia oferece um espaço para refletir sobre essas questões, compreender conflitos internos e construir uma relação mais consciente consigo mesma.</p>
+            </article>
+          </div>
+
+          <div class="reveal mt-12 flex flex-col items-start justify-between gap-6 border-t hairline pt-9 md:flex-row md:items-center md:gap-10">
+            <p class="display max-w-[620px] text-[clamp(1.35rem,2.2vw,1.75rem)] italic leading-[1.45] text-ink/85">Sua história não precisa ser compreendida a partir das expectativas dos outros. Ela merece ser escutada a partir de você.</p>
+            <a class="button-main shrink-0 !px-6 !py-4" href="https://wa.me/556696188147?text=Ol%C3%A1%20dra.%20Juliana%20gostaria%20de%20agendar%20minha%20sess%C3%A3o%20online" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" class="shrink-0"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
+              Quero iniciar minha psicoterapia
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 4 — Sobre mim -->
+      <section class="relative overflow-hidden border-y hairline bg-mist/45 py-20 md:py-28" id="sobre">
+        <svg class="leaf-line -left-10 top-16 h-64 w-64 rotate-[28deg] text-plum" viewBox="0 0 260 260" fill="none" aria-hidden="true"><path d="M51 222C84 156 129 104 218 40M97 155c-20-21-19-42-6-58 19 8 24 30 6 58ZM143 105c-1-25 14-42 34-47 8 22-6 39-34 47ZM78 183c-22-10-42-3-54 15 19 16 39 9 54-15ZM157 130c23-3 42 8 50 26-21 10-40-2-50-26Z" stroke="currentColor" stroke-width="1.2"/></svg>
+
+        <div class="container-site grid items-start gap-14 md:grid-cols-[1.12fr_.88fr] md:gap-20">
+          <div class="reveal max-w-[640px]">
             <p class="eyebrow mb-5">Sobre mim</p>
-            <h2 class="display max-w-[600px] text-[clamp(2.25rem,4.3vw,3.75rem)] leading-[1.1] text-ink">Um encontro com você, com mais <em class="text-plum">presença.</em></h2>
-            <div class="mt-7 space-y-4 text-[15px] leading-[1.75] text-ink/65">
-              <p>Acredito que cada pessoa carrega uma história única — e que ser acolhida de verdade pode transformar a forma como se relaciona consigo e com o mundo.</p>
-              <p>Meu trabalho é construir, ao seu lado, um espaço de escuta sem julgamentos. Um processo cuidadoso para compreender o que você sente e encontrar possibilidades mais leves de viver.</p>
+            <h2 class="display text-balance text-[clamp(2.2rem,4vw,3.5rem)] leading-[1.08] text-ink">Olá, sou <em class="text-plum">Juliana Garcia.</em></h2>
+            <p class="mt-3 text-[11.5px] font-semibold uppercase tracking-[.13em] text-ink/50">Psicóloga clínica | Trauma, Luto e Perdas</p>
+
+            <div class="mt-7 space-y-4 text-[14.5px] leading-[1.8] text-ink/65 md:text-[15px]">
+              <p>Minha atuação clínica é dedicada à escuta de pessoas que atravessam experiências de sofrimento emocional, especialmente mulheres que enfrentam perdas, traumas, rupturas afetivas e momentos de transformação em suas histórias.</p>
+              <p>Minha prática é orientada pela psicanálise, uma abordagem que reconhece a singularidade de cada pessoa e a importância de compreender os sentidos que atribuímos às nossas experiências.</p>
+              <p>Ao longo da vida, construímos formas de lidar com nossas dores, nossos vínculos e nossas expectativas. Algumas dessas formas, que um dia nos ajudaram a seguir, podem também se tornar fontes de sofrimento.</p>
+              <p>Acredito que a psicoterapia oferece a possibilidade de olhar para essas questões com profundidade, sem julgamentos e sem respostas prontas.</p>
+              <p>Meu compromisso é oferecer um espaço de escuta ética, sigilosa e acolhedora, onde você possa falar sobre sua história, compreender seus conflitos e elaborar experiências difíceis.</p>
+              <p class="font-semibold text-ink/85">Porque cuidar da saúde emocional também significa reconhecer que você não precisa sustentar tudo sozinha.</p>
             </div>
-            <div class="mt-8 flex flex-wrap items-end justify-between gap-5 border-t hairline pt-6">
-              <div><p class="font-script text-3xl leading-none text-plum md:text-4xl">Juliana Garcia</p><p class="mt-2 text-[11px] font-semibold uppercase tracking-[.12em] text-ink/50">Psicóloga clínica <span class="mx-1 text-plum">•</span> <span data-crp></span></p></div>
-              <span class="text-[12px] text-ink/45">CRP ativo</span>
+
+            <div class="mt-9 border-t hairline pt-6">
+              <p class="font-script text-4xl leading-none text-plum md:text-[42px]">Juliana Garcia</p>
+              <div class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10.5px] font-semibold uppercase tracking-[.13em] text-ink/50">
+                <span>Psicóloga Clínica</span>
+                <span class="text-plum" aria-hidden="true">•</span>
+                <span data-crp></span>
+                <span class="text-plum" aria-hidden="true">•</span>
+                <span>Atendimento online e presencial</span>
+              </div>
             </div>
+          </div>
+
+          <div class="reveal delay-2 relative mx-auto w-full max-w-[420px] md:mx-0 md:ml-auto">
+            <div class="absolute -right-4 -top-4 h-full w-full rounded-2xl border border-plum/20"></div>
+            <div class="photo-frame relative z-10 aspect-[.8] rounded-2xl bg-cream shadow-[0_20px_50px_rgba(51,58,90,.10)]">
+              <img src="./Fotos da Juliana/Juliana Garcia - Psicóloga (3).jpeg" alt="Juliana Garcia sentada em uma poltrona, com uma caneca nas mãos, em ambiente acolhedor" class="h-full w-full object-cover object-top" loading="lazy" />
+            </div>
+            <div class="absolute -bottom-5 -left-4 z-20 flex h-[74px] w-[74px] items-center justify-center rounded-full border-[6px] border-cream bg-plum text-center font-display text-3xl italic text-white shadow-lg" aria-hidden="true">Ψ</div>
           </div>
         </div>
       </section>
 
-      <section class="bg-mist/60 py-20 md:py-28" id="atendimentos">
-        <div class="container-site">
-          <div class="reveal mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <div><p class="eyebrow mb-5">Como posso te ajudar</p><h2 class="display max-w-[550px] text-[clamp(2.2rem,4vw,3.55rem)] leading-[1.1] text-ink">Cuidado para os desafios de cada fase.</h2></div>
-            <p class="max-w-[330px] text-[14px] leading-[1.7] text-ink/60">A terapia pode ser um lugar de pausa, clareza e reconexão com aquilo que importa para você.</p>
+      <!-- SEÇÃO 5 — Psicoterapia online -->
+      <section class="relative overflow-hidden py-20 md:py-28" id="online">
+        <div class="container-site grid items-start gap-12 md:grid-cols-[.72fr_1.28fr] md:gap-16">
+          <div class="reveal relative mx-auto w-full max-w-[360px] md:sticky md:top-28 md:mx-0">
+            <div class="photo-frame aspect-[.74] rounded-2xl bg-mist shadow-[0_20px_50px_rgba(51,58,90,.10)]">
+              <img src="./Fotos da Juliana/Juliana Garcia - Psicóloga (10).jpeg" alt="Retrato de Juliana Garcia com expressão serena, apoiada em uma poltrona" class="h-full w-full object-cover object-top" loading="lazy" />
+            </div>
+            <div class="mt-5 flex items-center gap-3 rounded-xl border border-ink/10 bg-mist/60 px-4 py-3">
+              <svg class="shrink-0 text-plum" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="12.5" height="12" rx="2.4" stroke="currentColor" stroke-width="1.4"/><path d="m15.5 11.4 4.1-2.4c.6-.3 1.4.1 1.4.8v4.4c0 .7-.8 1.1-1.4.8l-4.1-2.4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <p class="text-[11.5px] leading-[1.5] text-ink/60">Sessões por videochamada, com sigilo e acolhimento.</p>
+            </div>
           </div>
-          <div class="grid gap-4 md:grid-cols-2">
-            <article class="service-card reveal p-7 md:p-8"><span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M12 20a8 8 0 1 0-8-8c0 1.8.6 3.5 1.7 4.8L4 20l3.2-1.7A8 8 0 0 0 12 20Z" stroke="currentColor" stroke-width="1.35"/><path d="M9 12h.01M12 12h.01M15 12h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3 class="display mt-6 text-[23px] text-ink">Ansiedade</h3><p class="mt-3 max-w-[390px] text-[14px] leading-[1.7] text-ink/60">Entenda os sinais do seu corpo e encontre formas mais gentis de lidar com pensamentos acelerados.</p></article>
-            <article class="service-card reveal delay-1 p-7 md:p-8"><span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-3.9-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 6.1-7 10-7 10Z" stroke="currentColor" stroke-width="1.35"/><path d="M8.5 12.5h2l1-2.5 1.2 4 1-2h2" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="display mt-6 text-[23px] text-ink">Autoestima</h3><p class="mt-3 max-w-[390px] text-[14px] leading-[1.7] text-ink/60">Reconstrua a maneira como se olha e fortaleça uma relação mais compassiva com quem você é.</p></article>
-            <article class="service-card reveal delay-1 p-7 md:p-8"><span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.35"/><circle cx="16" cy="8" r="3" stroke="currentColor" stroke-width="1.35"/><path d="M3.5 19c.4-3 2-4.5 4.5-4.5S12.1 16 12.5 19M11.5 19c.4-3 2-4.5 4.5-4.5s4.1 1.5 4.5 4.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></span><h3 class="display mt-6 text-[23px] text-ink">Relacionamentos</h3><p class="mt-3 max-w-[390px] text-[14px] leading-[1.7] text-ink/60">Perceba seus padrões, expresse suas necessidades e crie relações mais honestas e possíveis.</p></article>
-            <article class="service-card reveal delay-2 p-7 md:p-8"><span class="icon-badge" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M5 17.5c1.5-1.6 3.5-2.5 6-2.5h1c2.5 0 4.5.9 6 2.5M7 11.5c0-4 2-6 5-6s5 2 5 6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/><path d="M12 5V3M9 3h6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></span><h3 class="display mt-6 text-[23px] text-ink">Estresse e mudanças</h3><p class="mt-3 max-w-[390px] text-[14px] leading-[1.7] text-ink/60">Atravesse transições e momentos de sobrecarga com mais recursos, consciência e apoio.</p></article>
+
+          <div class="reveal delay-1 max-w-[650px]">
+            <p class="eyebrow mb-5">Psicoterapia online — Como funciona?</p>
+            <h2 class="display text-balance text-[clamp(2.1rem,3.9vw,3.35rem)] leading-[1.1] text-ink">Um espaço de escuta para você, <em class="text-plum">onde estiver.</em></h2>
+
+            <div class="mt-7 space-y-4 text-[14.5px] leading-[1.8] text-ink/65 md:text-[15px]">
+              <p>Entre trabalho, família, responsabilidades e compromissos, nem sempre é simples encontrar tempo para cuidar de si.</p>
+              <p>A psicoterapia online permite realizar seu acompanhamento psicológico sem precisar se deslocar até um consultório.</p>
+              <p>As sessões acontecem por videochamada, em um espaço reservado para a escuta, respeitando os princípios éticos e o sigilo profissional.</p>
+            </div>
+
+            <p class="display mt-10 text-[24px] italic text-ink">Como são os atendimentos?</p>
+
+            <div class="mt-5 space-y-3">
+              <div class="flex gap-4 rounded-2xl border border-ink/10 bg-white/55 p-5 md:p-6">
+                <span class="icon-badge !h-11 !w-11 shrink-0" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.4" r="3.4" stroke="currentColor" stroke-width="1.4"/><path d="M5.2 20c.5-3.9 3.1-5.9 6.8-5.9s6.3 2 6.8 5.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+                <div>
+                  <h3 class="text-[13px] font-bold uppercase tracking-[.1em] text-ink">Sessões individuais</h3>
+                  <p class="mt-1.5 text-[14px] leading-[1.7] text-ink/60">Os encontros têm duração aproximada de 50 minutos e são dedicados à escuta de suas experiências, sentimentos e questões pessoais.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 rounded-2xl border border-ink/10 bg-white/55 p-5 md:p-6">
+                <span class="icon-badge !h-11 !w-11 shrink-0" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3.4" y="5" width="17.2" height="16" rx="2.6" stroke="currentColor" stroke-width="1.4"/><path d="M3.4 9.6h17.2M8.2 3v4M15.8 3v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="m9.6 15.4 1.6 1.6 3.4-3.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <div>
+                  <h3 class="text-[13px] font-bold uppercase tracking-[.1em] text-ink">Frequência dos encontros</h3>
+                  <p class="mt-1.5 text-[14px] leading-[1.7] text-ink/60">A frequência é combinada de acordo com as necessidades do processo terapêutico.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 rounded-2xl border border-ink/10 bg-white/55 p-5 md:p-6">
+                <span class="icon-badge !h-11 !w-11 shrink-0" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4.4" y="10" width="15.2" height="10.4" rx="2.6" stroke="currentColor" stroke-width="1.4"/><path d="M8 10V7.6a4 4 0 0 1 8 0V10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="12" cy="15.2" r="1.4" fill="currentColor"/></svg></span>
+                <div>
+                  <h3 class="text-[13px] font-bold uppercase tracking-[.1em] text-ink">Privacidade e sigilo</h3>
+                  <p class="mt-1.5 text-[14px] leading-[1.7] text-ink/60">Para realizar suas sessões, é importante escolher um ambiente tranquilo e privativo, no qual você possa falar com liberdade.</p>
+                </div>
+              </div>
+            </div>
+
+            <a class="button-main mt-8 !px-6 !py-4" href="https://wa.me/556696188147?text=Ol%C3%A1%20dra.%20Juliana%20gostaria%20de%20agendar%20minha%20sess%C3%A3o%20online" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" class="shrink-0"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
+              Quero iniciar minha psicoterapia
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="relative overflow-hidden py-20 md:py-28" id="contato">
+      <!-- Contato / chamada final -->
+      <section class="relative overflow-hidden pb-20 pt-4 md:pb-28" id="contato">
         <div class="container-site">
-          <div class="cta-panel relative overflow-hidden rounded-[22px] px-7 py-14 text-center md:px-12 md:py-20">
+          <div class="cta-panel reveal relative overflow-hidden rounded-[22px] px-7 py-14 text-center md:px-12 md:py-20">
             <svg class="absolute -right-3 -top-5 h-40 w-40 rotate-12 text-ink/10" viewBox="0 0 120 120" fill="none" aria-hidden="true"><path d="M60 104C53 83 39 63 14 47M43 70c-17-1-28-11-31-25 14-3 27 6 31 25ZM61 50c-1-18 8-29 21-34 6 14-2 27-21 34ZM76 77c15-8 29-5 38 6-11 11-25 9-38-6Z" stroke="currentColor" stroke-width="1"/></svg>
             <svg class="mx-auto mb-5 text-plum" width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-3.9-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 6.1-7 10-7 10Z" stroke="currentColor" stroke-width="1.3"/></svg>
             <p class="eyebrow">Um primeiro passo</p>
-            <h2 class="display mx-auto mt-4 max-w-[650px] text-[clamp(2.25rem,4.6vw,3.9rem)] leading-[1.08] text-ink">Você não precisa enfrentar isso <em class="text-plum">sozinho(a).</em></h2>
-            <p class="mx-auto mt-5 max-w-[440px] text-[14px] leading-[1.7] text-ink/60">Vamos conversar sobre o que você está vivendo e entender como a psicoterapia pode te acompanhar.</p>
-            <a class="button-main mt-8" data-whatsapp href="#" target="_blank" rel="noreferrer">Agendar uma conversa <span aria-hidden="true">↗</span></a>
-             <div class="mt-9 flex flex-wrap justify-center gap-x-7 gap-y-3 text-[12px] text-ink/60">
-               <a class="transition-colors hover:text-plum" data-whatsapp href="#" target="_blank" rel="noopener noreferrer">WhatsApp · <span data-whatsapp-display></span></a>
-               <span class="text-ink/20">•</span>
-               <a class="inline-flex items-center gap-2 transition-colors hover:text-plum" data-instagram href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Juliana Garcia">
-                 <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.1" stroke="currentColor" stroke-width="1.7"/><circle cx="17.7" cy="6.4" r="1" fill="currentColor"/></svg>
-                 <span data-instagram-label></span>
-               </a>
-             </div>
+            <h2 class="display mx-auto mt-4 max-w-[680px] text-[clamp(2.15rem,4.4vw,3.6rem)] leading-[1.08] text-ink">Sua história merece ser <em class="text-plum">escutada.</em></h2>
+            <p class="mx-auto mt-5 max-w-[490px] text-[14px] leading-[1.75] text-ink/60">Se você se reconheceu nestas palavras, talvez este seja o momento de cuidar de você com o mesmo cuidado que oferece a quem ama.</p>
+
+            <a class="button-main mt-8 !px-7 !py-4" href="https://wa.me/556696188147?text=Ol%C3%A1%20dra.%20Juliana%20gostaria%20de%20agendar%20minha%20sess%C3%A3o%20online" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" class="shrink-0"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
+              Agende sua consulta online
+            </a>
+
+            <div class="mt-9 flex flex-wrap justify-center gap-x-7 gap-y-3 text-[12.5px] text-ink/60">
+              <a class="inline-flex items-center gap-2 transition-colors hover:text-plum" href="https://wa.me/556696188147?text=Ol%C3%A1%20dra.%20Juliana%20gostaria%20de%20agendar%20minha%20sess%C3%A3o%20online" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 11.5a8.3 8.3 0 0 1-12.3 7.3L4 20l1.3-3.5A8.3 8.3 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M8.3 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-1.2-.3-2.5-1-3.6-2.1-1.1-1.1-1.8-2.4-2.1-3.6-.2-.6-.1-1.2.1-1.6Z" fill="currentColor"/></svg>
+                <span data-whatsapp-display></span>
+              </a>
+              <span class="text-ink/20" aria-hidden="true">•</span>
+              <a class="inline-flex items-center gap-2 transition-colors hover:text-plum" data-instagram href="https://www.instagram.com/julianamartinsgarcia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Juliana Garcia">
+                <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13.67.67 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.13-1.38.67-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4ZM18.41 4.15a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg>
+                <span data-instagram-label></span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -257,13 +451,13 @@
 
     <footer class="border-t hairline py-9 md:py-10">
       <div class="container-site flex flex-col items-center justify-center gap-2 text-center text-[11px] leading-relaxed text-ink/50">
-        <p>© <span id="year"></span> Juliana M. Garcia · Psicóloga Clínica</p>
+        <p>© <span id="year"></span> Juliana Garcia · Psicóloga Clínica</p>
         <p><span data-crp></span> · Atendimento online e presencial</p>
         <p class="flex flex-wrap items-center justify-center gap-3">
-          <a class="transition-colors hover:text-plum" data-whatsapp href="#" target="_blank" rel="noopener noreferrer">WhatsApp · <span data-whatsapp-display></span></a>
+          <a class="transition-colors hover:text-plum" href="https://wa.me/556696188147?text=Ol%C3%A1%20dra.%20Juliana%20gostaria%20de%20agendar%20minha%20sess%C3%A3o%20online" target="_blank" rel="noopener noreferrer">WhatsApp · <span data-whatsapp-display></span></a>
           <span aria-hidden="true">•</span>
-          <a class="inline-flex items-center gap-2 transition-colors hover:text-plum" data-instagram href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Juliana Garcia">
-            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.1" stroke="currentColor" stroke-width="1.7"/><circle cx="17.7" cy="6.4" r="1" fill="currentColor"/></svg>
+          <a class="inline-flex items-center gap-2 transition-colors hover:text-plum" data-instagram href="https://www.instagram.com/julianamartinsgarcia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Juliana Garcia">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13.67.67 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.13-1.38.67-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4ZM18.41 4.15a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg>
             <span data-instagram-label></span>
           </a>
         </p>
@@ -271,10 +465,6 @@
     </footer>
 
     <script>
-      const whatsappMessage = encodeURIComponent("Olá, Juliana! Gostaria de saber mais sobre o atendimento psicológico.");
-      const whatsappUrl = `https://wa.me/${CONTACT.whatsapp}?text=${whatsappMessage}`;
-
-      document.querySelectorAll("[data-whatsapp]").forEach((link) => { link.href = whatsappUrl; });
       document.querySelectorAll("[data-whatsapp-display]").forEach((node) => { node.textContent = CONTACT.whatsappDisplay; });
       document.querySelectorAll("[data-instagram]").forEach((link) => { link.href = CONTACT.instagramUrl; });
       document.querySelectorAll("[data-instagram-label]").forEach((label) => { label.textContent = CONTACT.instagram; });
@@ -316,7 +506,11 @@
       const navLinks = [...document.querySelectorAll("nav[aria-label='Navegação principal'] .nav-link")];
       const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) navLinks.forEach((link) => link.setAttribute("aria-current", link.getAttribute("href") === `#${entry.target.id}` ? "page" : "false"));
+          if (!entry.isIntersecting) return;
+          navLinks.forEach((link) => {
+            if (link.getAttribute("href") === `#${entry.target.id}`) link.setAttribute("aria-current", "page");
+            else link.removeAttribute("aria-current");
+          });
         });
       }, { rootMargin: "-35% 0px -55% 0px" });
       sections.forEach((section) => sectionObserver.observe(section));
